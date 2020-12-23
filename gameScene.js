@@ -20,7 +20,7 @@ let createGameScene = function(canvas, engine) {
     ground.receiveShadows = true;
 
     // Shadows
-    var shadowGenerator = new BABYLON.ShadowGenerator(2048, light);
+    var shadowGenerator = new BABYLON.ShadowGenerator(1024, light);
     shadowGenerator.useBlurExponentialShadowMap = true;
 
     // Dude
@@ -31,7 +31,7 @@ let createGameScene = function(canvas, engine) {
             shadowGenerator.getShadowMap().renderList.push(newMeshes2[index]);
         }
 
-        for (var count = 0; count < 111; count++) {
+        for (var count = 0; count < 5; count++) {
             var offsetX = 200 * Math.random() - 100;
             var offsetZ = 200 * Math.random() - 100;
             for (index = 1; index < newMeshes2.length; index++) {
